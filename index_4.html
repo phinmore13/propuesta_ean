@@ -1,0 +1,1190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Propuestas de consultoría · Universidad EAN</title>
+  <meta name="description" content="Propuesta de consultoría para el contact center comercial y la línea de negocio EANX de la Universidad EAN: enfoque, metodología, ejes de trabajo, roadmap e inversión.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f5f6b'/%3E%3Cpath d='M8 22h16M8 16h11M8 10h7' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    html{color-scheme:light}
+    :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+    body{margin:0;font-family:system-ui,sans-serif;font-size:14px}
+    img{max-width:100%}
+    [hidden]{display:none!important}
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+  <style>
+  /* Layout: documento largo con navegación fija; tesis → enfoque → metodología (stepper) → ejes (bloques por color) → roadmap (Gantt) → cierre. */
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --fg:#1b2130; --muted:#5d6675; --line:#dfe3ea; --line-strong:#c4cad6;
+    --accent:#0f5f6b; --accent-soft:#e1f0f2; --ink:#0f5f6b;
+    --com:#0f7c8a; --com-soft:#dcf1f4;
+    --ope:#b8711a; --ope-soft:#fbeedb;
+    --per:#7b4aa3; --per-soft:#eee4f7;
+    --cal:#3b63b5; --cal-soft:#e2e9f8;
+    --gob:#4b5563; --gob-soft:#e7e9ee;
+    --phase-a:rgba(15,95,107,.06); --phase-b:rgba(15,95,107,0);
+    --display:"Manrope",system-ui,sans-serif;
+    --body:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --shadow:0 1px 2px rgba(20,30,50,.06),0 8px 24px rgba(20,30,50,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161d; --surface:#1a2029; --fg:#e8ebf1; --muted:#9aa4b4; --line:#2b3340; --line-strong:#3b4555;
+      --accent:#5fc3d0; --accent-soft:#163238; --ink:#9ddbe3;
+      --com:#4fc2cf; --com-soft:#143c42;
+      --ope:#e3a35a; --ope-soft:#3f2c14;
+      --per:#b08ad8; --per-soft:#33244a;
+      --cal:#7ea0e6; --cal-soft:#1f2c48;
+      --gob:#aab3c2; --gob-soft:#2a313c;
+      --phase-a:rgba(95,195,208,.07); --phase-b:rgba(95,195,208,0);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161d; --surface:#1a2029; --fg:#e8ebf1; --muted:#9aa4b4; --line:#2b3340; --line-strong:#3b4555;
+    --accent:#5fc3d0; --accent-soft:#163238; --ink:#9ddbe3;
+    --com:#4fc2cf; --com-soft:#143c42;
+    --ope:#e3a35a; --ope-soft:#3f2c14;
+    --per:#b08ad8; --per-soft:#33244a;
+    --cal:#7ea0e6; --cal-soft:#1f2c48;
+    --gob:#aab3c2; --gob-soft:#2a313c;
+    --phase-a:rgba(95,195,208,.07); --phase-b:rgba(95,195,208,0);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.55;
+    padding-block:0 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+  h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
+  h1{font-size:clamp(30px,4vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.05}
+  h2{font-size:clamp(22px,2.4vw,28px);font-weight:800;letter-spacing:-.015em;line-height:1.15}
+  h3{font-size:17px;font-weight:700}
+  h4{font-size:15px;font-weight:700}
+  p{margin:0}
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .muted{color:var(--muted)}
+  .wrap{max-width:1120px;margin:0 auto}
+  .prose{max-width:68ch}
+  .prose p + p{margin-top:14px}
+  
+  /* Nav */
+  .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px}
+  .brand{font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:-.01em;white-space:nowrap}
+  .brand span{color:var(--muted);font-weight:600}
+  .links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .links::-webkit-scrollbar{display:none}
+  .links a{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:6px;white-space:nowrap}
+  .links a:hover,.links a:focus-visible{color:var(--fg);background:var(--accent-soft);outline:none}
+  
+  /* Hero */
+  .hero{padding-block:56px 40px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+  @media (max-width:860px){.hero{grid-template-columns:1fr;gap:24px;padding-block:36px 28px}}
+  .hero .lead{font-size:18px;color:var(--muted);max-width:60ch;margin-top:18px}
+  .hero .meta{display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--accent);padding-left:18px}
+  .hero .meta b{font-family:var(--display);font-weight:700}
+  .hero .meta small{display:block;color:var(--muted);font-size:13px}
+  .axes-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+  @media (max-width:700px){.axes-row{grid-template-columns:repeat(2,1fr)}}
+  .axis-chip{border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;border-left:4px solid}
+  .axis-chip b{font-family:var(--display);font-size:14px}
+  .axis-chip span{font-size:12px;color:var(--muted)}
+  
+  /* Sections */
+  section.block{padding-block:48px;border-top:1px solid var(--line)}
+  .sec-h{display:flex;flex-direction:column;gap:6px;margin-bottom:26px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+  
+  /* Thesis */
+  .thesis{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  @media (max-width:860px){.thesis{grid-template-columns:1fr}}
+  .thesis .big{font-family:var(--display);font-size:clamp(19px,2vw,23px);font-weight:600;line-height:1.35;letter-spacing:-.01em}
+  .chain{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;align-items:center}
+  .chain .step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.3;min-width:0;flex:1 1 150px}
+  .chain .step b{display:block;font-family:var(--display);font-size:13.5px;margin-bottom:2px}
+  .chain .arrow{color:var(--muted);font-size:16px}
+  .callout{background:var(--accent-soft);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+  .callout h3{color:var(--ink)}
+  .callout p{font-size:14.5px}
+  
+  /* Methodology stepper */
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  @media (max-width:1000px){.steps{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:640px){.steps{grid-template-columns:1fr}}
+  .step-c{padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;position:relative}
+  .step-c .num{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em}
+  .step-c .goal{font-size:13px;color:var(--muted)}
+  .step-c ul{margin:4px 0 0;padding-left:16px;font-size:13.5px;display:flex;flex-direction:column;gap:4px}
+  
+  /* Axes */
+  .axis{display:grid;grid-template-columns:300px 1fr;gap:28px;padding-block:34px;border-top:1px solid var(--line)}
+  .axis:first-of-type{border-top:0;padding-top:0}
+  @media (max-width:860px){.axis{grid-template-columns:1fr;gap:16px}}
+  .axis-side{display:flex;flex-direction:column;gap:10px;position:sticky;top:76px;align-self:start}
+  @media (max-width:860px){.axis-side{position:static}}
+  .axis-side .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+  .axis-side .tag i{width:12px;height:12px;border-radius:3px}
+  .axis-side h3{font-size:22px;font-weight:800;letter-spacing:-.015em}
+  .axis-side .kpi{font-size:13px;color:var(--muted);padding-top:10px;border-top:1px solid var(--line)}
+  .axis-side .kpi b{color:var(--fg);font-weight:600}
+  .items{display:flex;flex-direction:column;gap:10px}
+  .it{padding:0;display:block;min-width:0;border-left:4px solid}
+  .it summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:13px 18px;border-radius:0 12px 12px 0}
+  .it summary::-webkit-details-marker{display:none}
+  .it summary:hover{background:color-mix(in srgb,var(--accent-soft) 55%,transparent)}
+  .it summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .it .mark{width:8px;height:8px;border-radius:50%;margin-top:7px}
+  .it h4{margin:0;line-height:1.35}
+  .chev{width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-top:5px;margin-right:4px;flex:none}
+  .it[open] .chev{transform:rotate(-135deg);margin-top:9px}
+  .it .body{padding:0 18px 16px 40px}
+  .it .body p{font-size:14px;color:var(--muted)}
+  .it .body p + p{margin-top:8px}
+  .it.plain{padding:13px 18px;display:grid;grid-template-columns:auto 1fr;gap:14px}
+  @media (prefers-reduced-motion:no-preference){
+    .chev{transition:transform .2s ease}
+    .it[open] .body{animation:fadeIn .18s ease-out}
+  }
+  @keyframes fadeIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+  .tog{align-self:flex-start;border:1px solid var(--line-strong);background:var(--surface);color:var(--fg);font:600 12.5px var(--body);padding:6px 12px;border-radius:999px;cursor:pointer}
+  .tog:hover{border-color:var(--accent);color:var(--accent)}
+  .tog:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  
+  /* Roadmap */
+  .stats{display:flex;flex-wrap:wrap;gap:10px 28px;margin:4px 0 22px}
+  .stat{display:flex;flex-direction:column;gap:2px}
+  .stat b{font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat span{font-size:12.5px;color:var(--muted)}
+  .phases{display:grid;grid-template-columns:repeat(17,1fr);gap:4px;margin-bottom:22px}
+  .phase{border-radius:6px;padding:10px 12px;color:#fff;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .phase .n{font-family:var(--mono);font-size:11px;opacity:.85;letter-spacing:.08em}
+  .phase .t{font-family:var(--display);font-weight:700;font-size:14px;line-height:1.2}
+  .phase .w{font-size:12px;opacity:.9}
+  .p1{background:#0f5f6b}.p2{background:#1d7a86}.p3{background:#9a5e14}.p4{background:#b8711a}.p5{background:#4b5563}
+  @media (max-width:760px){
+    .phases{grid-template-columns:1fr;gap:6px}
+    .phase{flex-direction:row;align-items:baseline;gap:10px;flex-wrap:wrap;grid-column:1 / -1 !important}
+  }
+  .card-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .card-h .sub{color:var(--muted);font-size:13.5px;max-width:70ch}
+  .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;padding:3px;gap:2px;background:var(--bg)}
+  .seg button{border:0;background:transparent;color:var(--muted);font:600 13px var(--body);padding:6px 14px;border-radius:999px;cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  :root[data-theme="dark"] .seg button[aria-pressed="true"]{color:#0f1419}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#0f1419}}
+  .seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .gantt-scroll{overflow-x:auto;padding:0 0 8px}
+  .gantt{min-width:980px;display:grid;grid-template-columns:230px repeat(17,minmax(40px,1fr));position:relative;font-size:13px}
+  .gantt .corner{grid-column:1;position:sticky;left:0;background:var(--surface);z-index:3;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+  .wk{text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted);padding:8px 0 6px;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+  .wk small{display:block;font-size:9.5px;letter-spacing:.06em;opacity:.8}
+  .pband{grid-row:1;height:22px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:11.5px;color:#fff;border-radius:4px;margin:4px 2px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:0 6px}
+  .lane-h{grid-column:1;position:sticky;left:0;z-index:3;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 14px;display:flex;flex-direction:column;gap:2px;justify-content:center}
+  .lane-h .nm{font-family:var(--display);font-weight:800;font-size:13.5px;display:flex;align-items:center;gap:8px}
+  .lane-h .nm i{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .lane-h .kpi{font-size:11.5px;color:var(--muted);line-height:1.35}
+  .cell{border-left:1px solid var(--line);border-bottom:1px solid var(--line);min-height:36px}
+  .cell.ph1,.cell.ph2,.cell.ph5{background:var(--phase-a)}
+  .cell.ph3,.cell.ph4{background:var(--phase-b)}
+  .bar{position:relative;z-index:1;align-self:center;height:22px;border-radius:5px;margin:0 3px;display:flex;align-items:center;padding:0 8px;font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff;min-width:0}
+  .bar.soft{color:var(--fg);border:1px dashed currentColor;background:transparent!important;opacity:.85}
+  .bar.cont::after{content:"";position:absolute;right:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35))}
+  .blab{align-self:center;z-index:1;font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:4px;min-width:0}
+  .ms{align-self:center;justify-self:center;z-index:2;width:14px;height:14px;transform:rotate(45deg);border-radius:2px;border:2px solid var(--surface);box-shadow:0 0 0 1.5px currentColor}
+  .ms-wrap{display:flex;align-items:center;justify-content:center;gap:6px;z-index:2;min-width:0}
+  .ms-wrap span{font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .c-com{background:var(--com)}.c-ope{background:var(--ope)}.c-per{background:var(--per)}.c-cal{background:var(--cal)}.c-gob{background:var(--gob)}
+  .t-com{color:var(--com)}.t-ope{color:var(--ope)}.t-per{color:var(--per)}.t-cal{color:var(--cal)}.t-gob{color:var(--gob)}
+  :root[data-theme="dark"] .bar{color:#0f1419}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .bar{color:#0f1419}}
+  :root[data-theme="dark"] .bar.soft{color:var(--fg)}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .bar.soft{color:var(--fg)}}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .legend .sw{width:22px;height:10px;border-radius:3px}
+  .legend .sw.dash{border:1px dashed var(--muted);background:transparent}
+  .legend .dia{width:10px;height:10px;transform:rotate(45deg);border-radius:2px;background:var(--gob)}
+  .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+  @media (max-width:1000px){.grid5{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid5{grid-template-columns:1fr}}
+  .pc{display:flex;flex-direction:column;gap:10px;padding:18px;border-top:4px solid;min-width:0}
+  .pc .wk-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+  .pc p{font-size:13.5px}
+  .pc .out{font-size:12.5px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted)}
+  .pc .out b{color:var(--fg);font-weight:600}
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:22px}
+  @media (max-width:860px){.two{grid-template-columns:1fr}}
+  .list{display:flex;flex-direction:column}
+  .item{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:14px 20px;border-top:1px solid var(--line);min-width:0}
+  .item:first-of-type{border-top:0}
+  .item .k{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:3px;white-space:nowrap}
+  .item p{font-size:13.5px}
+  .item p b{font-weight:600}
+  .note{padding:14px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .note b{color:var(--fg);font-weight:600}
+  
+  /* Close */
+  .close{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+  @media (max-width:860px){.close{grid-template-columns:1fr}}
+  .deliv{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  @media (max-width:560px){.deliv{grid-template-columns:1fr}}
+  .deliv div{padding:12px 14px;font-size:13.5px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 8px 8px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  footer{padding-top:28px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+  
+  /* Capítulo 2 · EANX */
+  .chapter{margin-top:48px;border-radius:14px;background:#0f5f6b;color:#f4fbfc;padding:40px 36px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:end;position:relative;overflow:hidden}
+  .chapter::after{content:"";position:absolute;right:-60px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(255,255,255,.06)}
+  @media (max-width:860px){.chapter{grid-template-columns:1fr;padding:28px 22px}}
+  .chapter .eyebrow{color:rgba(244,251,252,.75)}
+  .chapter h1{font-size:clamp(28px,3.6vw,44px);margin-top:12px}
+  .chapter .lead{color:rgba(244,251,252,.82);font-size:17px;max-width:58ch;margin-top:14px}
+  .chapter .meta{border-left:2px solid rgba(244,251,252,.5);padding-left:18px;display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
+  .chapter .meta b{font-family:var(--display);font-weight:700}
+  .chapter .meta small{display:block;color:rgba(244,251,252,.72);font-size:13px}
+  .gaps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media (max-width:960px){.gaps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.gaps{grid-template-columns:1fr}}
+  .gap{padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+  .gap .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted)}
+  .gap h4{font-size:15px}
+  .gap p{font-size:13.5px;color:var(--muted)}
+  .gap.wide{grid-column:span 2}
+  @media (max-width:560px){.gap.wide{grid-column:auto}}
+  .velo{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+  .velo .row{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;font-size:12.5px}
+  .velo .row span{color:var(--muted)}
+  .velo .blocks{display:flex;gap:3px;flex-wrap:wrap}
+  .velo .blocks i{width:14px;height:14px;border-radius:3px;display:block}
+  .velo .blocks i.c{background:var(--line-strong)}
+  .velo .blocks i.e{background:var(--accent)}
+  .velo .n{font-family:var(--display);font-weight:800;font-size:18px;font-variant-numeric:tabular-nums;color:var(--fg)}
+  .sustain{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  @media (max-width:860px){.sustain{grid-template-columns:1fr}}
+  .scope{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+  @media (max-width:560px){.scope{grid-template-columns:1fr}}
+  .scope div{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+  .scope b{font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .scope span{font-size:13px;color:var(--muted)}
+  .q1{background:#0f5f6b}.q2{background:#1d7a86}.q3{background:#2b6f9e}.q4{background:#b8711a}.q5{background:#4b5563}
+  
+  /* Inversión */
+  .inv{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;align-items:stretch}
+  @media (max-width:860px){.inv{grid-template-columns:1fr}}
+  .inv-main{padding:28px;display:flex;flex-direction:column;gap:18px;border-top:4px solid var(--accent)}
+  .inv-main .amount{display:flex;flex-direction:column;gap:4px}
+  .inv-main .amount b{font-family:var(--display);font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+  .inv-main .amount b small{font-size:.42em;font-weight:700;letter-spacing:0;color:var(--muted);margin-left:6px}
+  .inv-main .amount span{font-size:14px;color:var(--muted)}
+  .inv-terms{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;padding-top:16px;border-top:1px solid var(--line)}
+  @media (max-width:480px){.inv-terms{grid-template-columns:1fr}}
+  .inv-terms div{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .inv-terms .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .inv-terms .val{font-size:14px;font-weight:600}
+  .inv-side{display:grid;grid-template-rows:auto auto;gap:16px}
+  .inv-box{padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+  .inv-box h4{font-size:14px}
+  .inv-box ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:13.5px}
+  .inv-box li{display:grid;grid-template-columns:14px 1fr;gap:10px;align-items:start;color:var(--muted)}
+  .inv-box li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:8px;justify-self:center}
+  .inv-box.excl li::before{background:var(--line-strong)}
+  .inv-foot{font-size:13px;color:var(--muted);max-width:70ch;margin-top:14px}
+  
+  /* ===== Glass ===== */
+  :root{
+    --glass:rgba(255,255,255,.52); --glass-strong:rgba(255,255,255,.78); --glass-border:rgba(255,255,255,.75); --glass-edge:rgba(27,33,48,.08);
+    --glass-hi:rgba(255,255,255,.9); --glass-shadow:0 10px 36px rgba(20,30,50,.10), 0 1px 2px rgba(20,30,50,.05);
+    --blob-a:rgba(15,124,138,.22); --blob-b:rgba(184,113,26,.16); --blob-c:rgba(123,74,163,.14); --blob-d:rgba(59,99,181,.14);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --glass:rgba(255,255,255,.055); --glass-strong:rgba(26,32,41,.82); --glass-border:rgba(255,255,255,.12); --glass-edge:rgba(255,255,255,.06);
+      --glass-hi:rgba(255,255,255,.14); --glass-shadow:0 10px 36px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.3);
+      --blob-a:rgba(79,194,207,.16); --blob-b:rgba(227,163,90,.12); --blob-c:rgba(176,138,216,.12); --blob-d:rgba(126,160,230,.12);
+    }
+  }
+  :root[data-theme="dark"]{
+    --glass:rgba(255,255,255,.055); --glass-strong:rgba(26,32,41,.82); --glass-border:rgba(255,255,255,.12); --glass-edge:rgba(255,255,255,.06);
+    --glass-hi:rgba(255,255,255,.14); --glass-shadow:0 10px 36px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.3);
+    --blob-a:rgba(79,194,207,.16); --blob-b:rgba(227,163,90,.12); --blob-c:rgba(176,138,216,.12); --blob-d:rgba(126,160,230,.12);
+  }
+  body{
+    background:
+      radial-gradient(900px 600px at 8% 4%, var(--blob-a), transparent 60%),
+      radial-gradient(800px 560px at 92% 18%, var(--blob-b), transparent 60%),
+      radial-gradient(760px 600px at 14% 62%, var(--blob-c), transparent 60%),
+      radial-gradient(900px 640px at 88% 86%, var(--blob-d), transparent 60%),
+      var(--bg);
+    background-attachment:fixed, fixed, fixed, fixed, scroll;
+  }
+  .card,.callout,.chain .step,.axis-chip,.deliv div,.seg,.tog{
+    background:var(--glass);
+    -webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);
+    border:1px solid var(--glass-border);
+    box-shadow:var(--glass-shadow), inset 0 1px 0 var(--glass-hi), 0 0 0 1px var(--glass-edge);
+  }
+  .card{border-radius:14px}
+  .deliv div{border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+  .callout{background:color-mix(in srgb,var(--accent-soft) 55%,var(--glass))}
+  .axis-chip{border-left-width:4px}
+  .card-h,.legend,.item,.note,.pc .out,.axis-side .kpi,.inv-terms{border-color:var(--glass-edge)}
+  .gantt .corner,.lane-h,.rowlab{background:var(--glass-strong);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+  .wk,.cell,.gantt .corner,.lane-h{border-color:var(--glass-edge)}
+  .cell.ph1,.cell.ph2,.cell.ph5{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+  .ms{border-color:var(--bg)}
+  .nav{background:color-mix(in srgb,var(--bg) 62%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-bottom-color:var(--glass-edge)}
+  .seg{padding:3px}
+  .seg button[aria-pressed="true"]{box-shadow:0 2px 8px rgba(15,95,107,.25)}
+  .tog{background:var(--glass)}
+  .phase{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 6px 18px rgba(20,30,50,.10)}
+  .p1,.q1{background:rgba(15,95,107,.86)}.p2,.q2{background:rgba(29,122,134,.86)}.p3{background:rgba(154,94,20,.86)}.q3{background:rgba(43,111,158,.86)}.p4,.q4{background:rgba(184,113,26,.86)}.p5,.q5{background:rgba(75,85,99,.86)}
+  .chapter{background:linear-gradient(135deg,rgba(15,95,107,.92),rgba(29,122,134,.86));-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.22);box-shadow:var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.28)}
+  .chapter::after{border-color:rgba(255,255,255,.10)}
+  .it summary:hover{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+  .it summary{border-radius:0 14px 14px 0}
+  section.block{border-top-color:var(--glass-edge)}
+  .axis{border-top-color:var(--glass-edge)}
+  footer{border-top-color:var(--glass-edge)}
+  .hero .meta{border-left-color:var(--accent)}
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+    .card,.callout,.chain .step,.axis-chip,.deliv div,.seg,.tog{background:var(--glass-strong)}
+    .gantt .corner,.lane-h,.rowlab{background:var(--surface)}
+  }
+  </style>
+</head>
+<body>
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <div class="brand">Universidad EAN <span>· Propuestas de consultoría</span></div>
+    <div class="links">
+      <a href="#inicio">1 · Contact center</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#ejes">Ejes</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#eanx">2 · EANX</a>
+      <a href="#eanx-roadmap">Roadmap EANX</a>
+      <a href="#inversion">Inversión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero" id="inicio">
+    <div>
+      <span class="eyebrow">Capítulo 1 · Contact center comercial · Noviembre 2026</span>
+      <h1 style="margin-top:12px">Una operación comercial saludable y consistente en sus resultados</h1>
+      <p class="lead">Plan de intervención sobre el contact center comercial de la Universidad EAN: cuatro ejes de trabajo, una metodología en cinco fases y un roadmap de cuatro meses con la consultoría actuando también como auditoría de la implementación.</p>
+      <div class="axes-row">
+        <div class="axis-chip" style="border-color:var(--com);background:var(--com-soft)"><b>Comercial</b><span>Modelo de llamada y funnel</span></div>
+        <div class="axis-chip" style="border-color:var(--ope);background:var(--ope-soft)"><b>Operación</b><span>Rituales y productividad</span></div>
+        <div class="axis-chip" style="border-color:var(--per);background:var(--per-soft)"><b>Personas</b><span>Cultura, rotación, formación</span></div>
+        <div class="axis-chip" style="border-color:var(--cal);background:var(--cal-soft)"><b>Calidad</b><span>Medición y mejora continua</span></div>
+      </div>
+    </div>
+    <div class="meta">
+      <div><b>Ricardo Pinzón</b><small>Consultor · Operaciones comerciales y contact center</small></div>
+      <div><b>4 meses · 17 semanas</b><small>Diagnóstico, diseño, piloto, escalamiento y cierre</small></div>
+      <div><b>Asesoría + auditoría</b><small>Verificación del cumplimiento de cada plan de acción</small></div>
+    </div>
+  </header>
+
+  <section class="block" id="tesis">
+    <div class="sec-h">
+      <span class="eyebrow">Punto de partida</span>
+      <h2>Los resultados por debajo de la meta no tienen una sola causa</h2>
+    </div>
+    <div class="thesis">
+      <div class="prose">
+        <p class="big">Son la suma de brechas que se acumulan a lo largo de todo el funnel.</p>
+        <p style="margin-top:16px">Parte del resultado se decide antes de que el asesor levante el teléfono, en la velocidad y la calidad con la que se gestiona el lead; parte se decide en la llamada; parte se decide después, en el camino que recorre el cliente desde que dice sí hasta que se matricula; y todo lo anterior depende de las personas que ejecutan y de la calidad con la que se controla.</p>
+        <p>Atacar solo la llamada mejora un eslabón de la cadena; atacar la cadena completa es lo que mueve el resultado.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Dónde se decide el resultado</span>
+        <div class="chain">
+          <div class="step"><b>Antes de la llamada</b>Velocidad y calidad de la gestión del lead</div>
+          <span class="arrow">→</span>
+          <div class="step"><b>En la llamada</b>Modelo comercial y venta consultiva</div>
+          <span class="arrow">→</span>
+          <div class="step"><b>Después de la llamada</b>Del sí del cliente a la matrícula</div>
+        </div>
+        <div class="chain" style="margin-top:10px">
+          <div class="step" style="flex-basis:100%"><b>Debajo de todo</b>Las personas que ejecutan y la calidad con la que se controla</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="enfoque">
+    <div class="sec-h">
+      <span class="eyebrow">Enfoque</span>
+      <h2>La venta es el output de una cadena de valor</h2>
+    </div>
+    <div class="thesis">
+      <div class="prose">
+        <p>Lo que diferencia a las compañías son los sistemas que tienen definidos dentro de sus procesos y la venta es solo el output de una cadena de valor. La Universidad EAN tiene un camino recorrido de mucho valor que permite que el trabajo que se deba ejecutar esté en el cuidado al detalle de cada una de las actividades que se deben desarrollar con rigor para alcanzar los objetivos.</p>
+        <p>De acuerdo a ello, el plan de trabajo que propongo se basa en poder impactar los ejes comercial, de operación, de personas y de calidad, cada uno con sus diferentes aristas y dinámicas que confluyen para construir una operación comercial saludable y consistente en sus resultados.</p>
+      </div>
+      <div class="callout">
+        <span class="eyebrow" style="color:var(--ink)">Lo que hace distinta esta propuesta</span>
+        <h3>La consultoría no solo abarca la asesoría: abarca también la auditoría</h3>
+        <p>Esto permite verificar y reportar el grado de cumplimiento de cada plan de acción a ejecutar. Durante la implementación, cada plan tiene un responsable, una fecha y un entregable; la consultoría diseña y acompaña, y además verifica que lo acordado se cumple.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="metodologia">
+    <div class="sec-h">
+      <span class="eyebrow">Metodología</span>
+      <h2>Cinco fases para desarrollar la intervención</h2>
+    </div>
+    <div class="steps">
+      <div class="card step-c">
+        <span class="num">FASE 1</span>
+        <h3>Diagnóstico</h3>
+        <ul>
+          <li>Comprender la situación actual</li>
+          <li>Entender las causas raíz de las oportunidades de mejora</li>
+          <li>Establecer el punto de partida</li>
+        </ul>
+      </div>
+      <div class="card step-c">
+        <span class="num">FASE 2</span>
+        <h3>Estrategia y diseño</h3>
+        <ul>
+          <li>Priorización de hallazgos</li>
+          <li>Definición de objetivos y resultados esperados</li>
+          <li>Diseño de la solución</li>
+        </ul>
+      </div>
+      <div class="card step-c">
+        <span class="num">FASE 3</span>
+        <h3>Planificación</h3>
+        <p class="goal">Convertir el diseño en un plan ejecutable</p>
+        <ul>
+          <li>Construcción del plan de implementación</li>
+        </ul>
+      </div>
+      <div class="card step-c">
+        <span class="num">FASE 4</span>
+        <h3>Ejecución e implementación</h3>
+        <p class="goal">Poner las soluciones en funcionamiento</p>
+        <ul>
+          <li>Validación y piloto</li>
+          <li>Implementación y gestión del cambio</li>
+        </ul>
+      </div>
+      <div class="card step-c">
+        <span class="num">FASE 5</span>
+        <h3>Seguimiento, optimización y cierre</h3>
+        <p class="goal">Medir resultados y asegurar la sostenibilidad</p>
+        <ul>
+          <li>Medición, control y optimización</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ejes">
+    <div class="sec-h">
+      <span class="eyebrow">Ejes de trabajo</span>
+      <h2>Qué se trabaja en cada eje</h2>
+      <p class="muted prose">Dentro de cada uno de los ejes y siguiendo la metodología, trabajaríamos en cada uno de los siguientes ítems para construir la consistencia del resultado.</p>
+    </div>
+
+    <div class="axis">
+      <div class="axis-side">
+        <span class="tag t-com"><i class="c-com"></i>Eje 1</span>
+        <h3>Comercial</h3>
+        <p class="muted" style="font-size:14px">El modelo de la llamada, el funnel completo y la formación consultiva.</p>
+        <p class="kpi"><b>Indicador de éxito:</b> conversión contacto → inscrito e inscrito → matriculado.</p>
+        <button type="button" class="tog" data-open="false">Abrir todo</button>
+      </div>
+      <div class="items">
+        <details class="card it" style="border-left-color:var(--com)" open>
+          <summary><i class="mark c-com"></i><h4>Diagnóstico del modelo comercial de la llamada y de todos los procesos involucrados en el funnel</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Este diagnóstico se construye con escucha de una muestra de llamadas por producto y por cuartil de asesor, análisis de la conversión en cada etapa del funnel, revisión del argumentario vigente y levantamiento de las objeciones más frecuentes: precio, tiempo, financiación y comparación con otras instituciones.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--com)">
+          <summary><i class="mark c-com"></i><h4>Refinamiento del modelo comercial de la llamada para todos los productos</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>El modelo de llamada queda documentado por producto con sus componentes: apertura, descubrimiento de la necesidad del cliente, propuesta de valor, manejo de objeciones, cierre y compromiso de siguiente paso. Se acompaña de un argumentario por producto y de una cadencia de seguimiento por canal (llamada, WhatsApp y correo) definida según el estado en que se encuentra cada lead.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--com)">
+          <summary><i class="mark c-com"></i><h4>Seguimiento posterior a la llamada hasta la matrícula</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>En educación la venta real es la matrícula, y entre el sí del cliente y el pago se pierde una parte relevante del resultado: documentos, proceso de admisión, financiación. Se diseña el proceso de acompañamiento del lead en esa etapa, la coordinación con admisiones y financiera, y la gestión de recuperación de inscritos que no llegaron a matricularse.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--com)">
+          <summary><i class="mark c-com"></i><h4>Formación comercial con enfoque 100% de venta consultiva</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Se genera una formación grabada para que pueda verse y replicarse las veces necesarias a la operación. La formación se genera por segmento de producto.</p></div>
+        </details>
+      </div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-side">
+        <span class="tag t-ope"><i class="c-ope"></i>Eje 2</span>
+        <h3>Operación</h3>
+        <p class="muted" style="font-size:14px">Rituales de gestión, productividad y planes de acción por cuartil.</p>
+        <p class="kpi"><b>Indicador de éxito:</b> ventas por hora conectada y cumplimiento de meta por equipo.</p>
+        <button type="button" class="tog" data-open="false">Abrir todo</button>
+      </div>
+      <div class="items">
+        <details class="card it" style="border-left-color:var(--ope)" open>
+          <summary><i class="mark c-ope"></i><h4>Fase diagnóstica</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Se diagnostica la productividad por asesor y por franja horaria, la distribución de la jornada (tiempo conectado, tiempo en gestión y tiempo improductivo), el dimensionamiento del equipo frente al volumen de leads, la estructura de metas y la forma en que hoy se ejecutan los rituales de gestión.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--ope)">
+          <summary><i class="mark c-ope"></i><h4>Rituales de gestión ejecutados con estructura y salidas</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body">
+            <p>Preturno, seguimiento hora a hora, metas publicadas, ventas publicadas, ambiente comercial, posturno y revisión semanal de pipeline.</p>
+            <p>Cada ritual queda documentado con dueño, duración, insumo y salida. Los coordinadores son quienes los ejecutan: la consultoría los diseña, los modela durante las primeras semanas y después audita su cumplimiento.</p>
+          </div>
+        </details>
+        <details class="card it" style="border-left-color:var(--ope)">
+          <summary><i class="mark c-ope"></i><h4>Parrilla de actividades mensuales ligadas a la estacionalidad y planes de acción para cada uno de los cuartiles</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>La estacionalidad se ata al calendario de admisiones de la universidad, de modo que cada mes tenga sus actividades comerciales definidas con anticipación. Los cuartiles son la segmentación de los asesores por desempeño, y cada grupo tiene un plan distinto: retener y exigir al primer cuartil, acelerar al segundo y al tercero, y tomar decisiones sobre el cuarto.</p></div>
+        </details>
+        <div class="card it plain" style="border-left-color:var(--ope)">
+          <i class="mark c-ope"></i>
+          <h4>Diseño de plan de acción para cada oportunidad de mejora detectada y seguimiento a la ejecución</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-side">
+        <span class="tag t-per"><i class="c-per"></i>Eje 3</span>
+        <h3>Personas</h3>
+        <p class="muted" style="font-size:14px">Cultura, rotación, formación, coaching y desarrollo de mandos medios.</p>
+        <p class="kpi"><b>Indicador de éxito:</b> rotación, absentismo y tiempo de curva de aprendizaje.</p>
+        <button type="button" class="tog" data-open="false">Abrir todo</button>
+      </div>
+      <div class="items">
+        <details class="card it" style="border-left-color:var(--per)" open>
+          <summary><i class="mark c-per"></i><h4>Fase diagnóstica</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Se diagnostican la rotación y el absentismo con sus causas raíz, el modelo de incentivos y variable, la carga y el clima de los coordinadores, y el perfil de los asesores que mejor convierten.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--per)">
+          <summary><i class="mark c-per"></i><h4>Construcción de cultura</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>La cultura es todo lo que sucede cuando la supervisión no está presente. Se hace tangible con reconocimiento público, rituales de celebración de la venta, estándares de comportamiento en piso y rutas de crecimiento claras: asesor, asesor senior, coordinador.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--per)">
+          <summary><i class="mark c-per"></i><h4>Motivación y ambiente comercial</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Estrategias de motivación para desarrollar un ambiente comercial que impacte de manera positiva las ventas y el salario emocional de la operación.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--per)">
+          <summary><i class="mark c-per"></i><h4>Mitigación de rotación y absentismo</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Además del diagnóstico se entrega un plan de mitigación con metas de rotación y absentismo, que incluye una propuesta de ajuste al modelo de incentivos dentro del marco que la universidad defina.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--per)">
+          <summary><i class="mark c-per"></i><h4>Modelo de formación, ingreso y desarrollo</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body">
+            <p>Diagnóstico y refinamiento del modelo de formación; selección, onboarding y formación continua.</p>
+            <p>El perfil de selección se construye a partir de los asesores que mejor convierten. El onboarding se mide por curva de aprendizaje: cuántas semanas tarda un asesor nuevo en alcanzar la media del equipo. La formación continua se alimenta cada semana de los hallazgos de calidad.</p>
+          </div>
+        </details>
+        <details class="card it" style="border-left-color:var(--per)">
+          <summary><i class="mark c-per"></i><h4>Coaching, gestión del desempeño y desarrollo de mandos medios</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body">
+            <p>Diagnóstico del modelo de coaching y gestión del desempeño, con redefinición del proceso de ser necesario.</p>
+            <p>Los coordinadores son el multiplicador de toda la intervención: ellos ejecutan los rituales, sostienen el modelo de llamada y hacen el coaching diario. Por eso el eje incluye su formación en gestión de piso, coaching y conversaciones de desempeño, con acompañamiento en piso durante la implementación.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-side">
+        <span class="tag t-cal"><i class="c-cal"></i>Eje 4</span>
+        <h3>Calidad y mejora continua</h3>
+        <p class="muted" style="font-size:14px">Que la calidad mida lo que vende y alimente la formación cada semana.</p>
+        <p class="kpi"><b>Indicador de éxito:</b> nota de calidad correlacionada con conversión y tiempo de retroalimentación al asesor.</p>
+        <button type="button" class="tog" data-open="false">Abrir todo</button>
+      </div>
+      <div class="items">
+        <details class="card it" style="border-left-color:var(--cal)" open>
+          <summary><i class="mark c-cal"></i><h4>Diagnóstico del modelo de calidad y del entrenamiento de producto y comercial</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Se revisa si la plantilla de calidad mide lo que vende: la nota de calidad de cada asesor se cruza con su conversión. Si la calidad no correlaciona con el resultado, la plantilla está midiendo lo equivocado.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--cal)">
+          <summary><i class="mark c-cal"></i><h4>Optimización del proceso de calidad</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>Desarrollar un proceso de calidad mucho más sencillo y coherente: el resultado de una auditoría de calidad debe coincidir con los resultados de ventas del equipo; si no, está mal desarrollado. Evaluar la posibilidad de optimizar el proceso con herramientas de IA.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--cal)">
+          <summary><i class="mark c-cal"></i><h4>Reconfiguración de los indicadores de calidad y reestructuración del modelo de entrenamiento, de ser necesario</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>El entrenamiento de producto y comercial se alimenta cada semana de los hallazgos de calidad, cerrando el ciclo calidad → formación → coaching → calidad. Ese ciclo es lo que convierte la mejora continua en una práctica y no en una intención.</p></div>
+        </details>
+        <details class="card it" style="border-left-color:var(--cal)">
+          <summary><i class="mark c-cal"></i><h4>Calibraciones semanales</h4><i class="chev" aria-hidden="true"></i></summary>
+          <div class="body"><p>En las calibraciones participan calidad, los coordinadores y el consultor, sobre una muestra definida de llamadas, y cada sesión tiene dos salidas: ajustes a la plantilla y temas de formación de la semana.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="roadmap">
+    <div class="sec-h">
+      <span class="eyebrow">Roadmap</span>
+      <h2>Cuatro meses, diecisiete semanas</h2>
+      <p class="muted prose">Las cinco fases no van en cascada: se solapan para que el diseño arranque antes de cerrar el diagnóstico y para que los cuatro ejes avancen en paralelo. Lo que sí va en orden estricto es la cadena modelo de llamada → plantilla de calidad → formación → coaching.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>fases solapadas</span></div>
+      <div class="stat"><b>4</b><span>ejes en paralelo</span></div>
+      <div class="stat"><b>3</b><span>semanas de piloto</span></div>
+      <div class="stat"><b>3</b><span>decisiones de la universidad</span></div>
+      <div class="stat"><b>S2</b><span>primeras acciones en piso</span></div>
+    </div>
+
+    <div class="phases" aria-label="Fases por semana">
+      <div class="phase p1" style="grid-column:1 / span 3"><span class="n">FASE 1</span><span class="t">Diagnóstico</span><span class="w">Semanas 1–3</span></div>
+      <div class="phase p2" style="grid-column:4 / span 3"><span class="n">FASE 2 + 3</span><span class="t">Diseño y planificación</span><span class="w">Semanas 3–6</span></div>
+      <div class="phase p3" style="grid-column:7 / span 3"><span class="n">FASE 4A</span><span class="t">Piloto</span><span class="w">Semanas 7–9</span></div>
+      <div class="phase p4" style="grid-column:10 / span 5"><span class="n">FASE 4B</span><span class="t">Escalamiento</span><span class="w">Semanas 10–14</span></div>
+      <div class="phase p5" style="grid-column:15 / span 3"><span class="n">FASE 5</span><span class="t">Medición y cierre</span><span class="w">Semanas 15–17</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h">
+        <div>
+          <h3>Qué pasa en cada eje, semana a semana</h3>
+          <p class="sub">La vista simple muestra una línea por eje y fase. La detallada abre cada actividad de la propuesta.</p>
+        </div>
+        <div class="seg" role="group" aria-label="Nivel de detalle">
+          <button type="button" id="btn-simple" aria-pressed="true">Vista simple</button>
+          <button type="button" id="btn-detalle" aria-pressed="false">Vista detallada</button>
+        </div>
+      </div>
+      <div class="gantt-scroll"><div class="gantt" id="gantt"></div></div>
+      <div class="legend">
+        <span><i class="sw c-com"></i>Comercial</span>
+        <span><i class="sw c-ope"></i>Operación</span>
+        <span><i class="sw c-per"></i>Personas</span>
+        <span><i class="sw c-cal"></i>Calidad</span>
+        <span><i class="sw c-gob"></i>Gobierno y auditoría</span>
+        <span><i class="sw dash"></i>Condicionado a decisión de la universidad</span>
+        <span><i class="dia"></i>Hito o entregable</span>
+      </div>
+    </div>
+
+    <div class="grid5">
+      <div class="card pc" style="border-top-color:#0f5f6b">
+        <span class="wk-lbl">SEMANAS 1–3</span>
+        <h4>Diagnóstico</h4>
+        <p>Los cuatro ejes se diagnostican a la vez porque comparten insumos: la escucha de llamadas sirve a comercial y calidad, las entrevistas a operación y personas. Desde la semana 2 arrancan preturno, metas y ventas publicadas.</p>
+        <p class="out"><b>Entrega:</b> informe de diagnóstico con punto de partida y mapa de brechas por eje.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#1d7a86">
+        <span class="wk-lbl">SEMANAS 3–6</span>
+        <h4>Diseño y planificación</h4>
+        <p>El modelo de llamada se diseña primero y sobre él la plantilla de calidad y la formación. Rituales, parrilla y eje de personas corren en paralelo. La semana 6 convierte el diseño en cronograma con dueños y piloto definido.</p>
+        <p class="out"><b>Entrega:</b> plan maestro de mejora y plan de implementación.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#9a5e14">
+        <span class="wk-lbl">SEMANAS 7–9</span>
+        <h4>Piloto</h4>
+        <p>Un equipo opera con el modelo de llamada, la plantilla y los rituales completos, comparado contra el resto de la operación. Mientras tanto se graba la formación por segmento y arranca el acompañamiento a coordinadores.</p>
+        <p class="out"><b>Entrega:</b> resultados del piloto y formación grabada.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#b8711a">
+        <span class="wk-lbl">SEMANAS 10–14</span>
+        <h4>Escalamiento</h4>
+        <p>Todo lo validado pasa a la operación completa: formación desplegada, calibraciones semanales, separación de roles, seguimiento hasta matrícula, selección y onboarding nuevos, planes por cuartil, cultura e incentivos.</p>
+        <p class="out"><b>Entrega:</b> operación completa bajo el nuevo sistema, auditada quincenalmente.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#4b5563">
+        <span class="wk-lbl">SEMANAS 15–17</span>
+        <h4>Medición y cierre</h4>
+        <p>Cada indicador se mide contra su punto de partida y su meta. El equipo de la EAN opera rituales, calibraciones y coaching sin el consultor en piso; la auditoría verifica que se sostiene.</p>
+        <p class="out"><b>Entrega:</b> tablero, manual de rituales, modelo de llamada, plantilla de calidad, modelo de formación y coaching, plan de sostenibilidad.</p>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-h"><div><h3>Por qué este orden</h3><p class="sub">Las cuatro reglas que fijan la secuencia.</p></div></div>
+        <div class="list">
+          <div class="item"><span class="k">Regla 1</span><p><b>Diagnosticar todo a la vez.</b> Los cuatro ejes usan los mismos insumos (llamadas, CRM, entrevistas), así que separarlos en el tiempo solo alarga el calendario.</p></div>
+          <div class="item"><span class="k">Regla 2</span><p><b>El modelo de llamada va primero.</b> La plantilla de calidad lo mide, la formación lo enseña y el coaching lo sostiene. Nada de eso se puede diseñar antes.</p></div>
+          <div class="item"><span class="k">Regla 3</span><p><b>Pilotear antes de escalar.</b> Tres semanas con un equipo contra el resto de la operación. Lo que no demuestra resultado en piloto no se implementa.</p></div>
+          <div class="item"><span class="k">Regla 4</span><p><b>Lo que depende de la universidad va al final.</b> La propuesta de incentivos se entrega en la semana 6 para que su aprobación no frene el resto.</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-h"><div><h3>Decisiones de la universidad</h3><p class="sub">Tres hitos que conviene fijar en el calendario desde el inicio.</p></div></div>
+        <div class="list">
+          <div class="item"><span class="k">Sem. 4</span><p><b>Prioridades y metas por indicador.</b> Sesión con la dirección sobre el informe de diagnóstico.</p></div>
+          <div class="item"><span class="k">Sem. 6</span><p><b>Propuesta de ajuste al modelo de incentivos.</b> Se entrega para decisión; su aprobación habilita el ajuste en la semana 12.</p></div>
+          <div class="item"><span class="k">Sem. 9</span><p><b>Escalar el piloto.</b> Con los resultados de tres semanas se decide el despliegue a toda la operación.</p></div>
+        </div>
+        <p class="note"><b>Lo que 4 meses no alcanza a mostrar:</b> el efecto sobre rotación y absentismo, que son indicadores lentos. Se recomienda dejar las metas del eje de personas a seis meses y ofrecer una auditoría mensual ligera durante los dos meses posteriores al cierre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cierre">
+    <div class="sec-h">
+      <span class="eyebrow">Al cierre</span>
+      <h2>Lo que queda instalado en la operación</h2>
+    </div>
+    <div class="close">
+      <div class="prose">
+        <p>La intervención termina cuando el equipo de la Universidad EAN opera el sistema completo sin el consultor en piso y la auditoría verifica que se sostiene. Lo que se entrega no es un informe: es la caja de herramientas con la que la operación sigue funcionando.</p>
+        <p>Cada eje cierra con su indicador de éxito medido contra el punto de partida fijado en el diagnóstico y contra la meta acordada con la dirección.</p>
+      </div>
+      <div class="deliv">
+        <div>Tablero de control de la operación</div>
+        <div>Manual de rituales de gestión</div>
+        <div>Modelo de llamada documentado por producto</div>
+        <div>Formación comercial grabada por segmento</div>
+        <div>Plantilla de calidad y proceso de calibración</div>
+        <div>Modelo de formación, selección y onboarding</div>
+        <div>Modelo de coaching y gestión del desempeño</div>
+        <div>Plan de sostenibilidad a cargo del equipo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CAPÍTULO 2 · EANX ===================== -->
+  <header class="chapter" id="eanx">
+    <div>
+      <span class="eyebrow">Capítulo 2 · EANX · Noviembre 2026</span>
+      <h1>Redefinir EANX: producto, segmento y posición dentro de la oferta de la universidad</h1>
+      <p class="lead">EANX tiene cursos de altísima calidad y contenido de muchísimo valor. Lo que no tiene hoy es un modelo que convierta ese valor en crecimiento. Esta propuesta acompaña a la dirección en la redefinición del proyecto y en la ejecución de las decisiones.</p>
+    </div>
+    <div class="meta">
+      <div><b>2 semanas de diagnóstico</b><small>Situación actual del proyecto, con datos y no con intuiciones</small></div>
+      <div><b>14 semanas de acompañamiento</b><small>Redefinición, diseño del modelo y ejecución, hasta cumplir 4 meses</small></div>
+      <div><b>Asesoría + auditoría</b><small>La misma lógica del capítulo 1: lo decidido se verifica</small></div>
+    </div>
+  </header>
+
+  <section class="block" id="eanx-situacion">
+    <div class="sec-h">
+      <span class="eyebrow">Situación actual</span>
+      <h2>Un modelo B2C que no ha tenido el éxito esperado</h2>
+      <p class="muted prose">EANX abandonó el segmento B2B, segmento que en el pasado aumentó el revenue del proyecto. Hoy mantiene su modelo B2C, que a pesar de la calidad de sus cursos tiene cinco falencias que se encadenan entre sí.</p>
+    </div>
+    <div class="gaps">
+      <div class="card gap wide">
+        <span class="k">FALENCIA 1 · VELOCIDAD</span>
+        <h4>Produce cursos a una velocidad de 1/20 respecto a la competencia</h4>
+        <p>Esto impacta directamente en la percepción de valor que tiene un cliente en la comparativa de oferta.</p>
+        <div class="velo" aria-label="Cursos producidos por cada 20 de la competencia">
+          <div class="row"><span>Competencia</span><div class="blocks"><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><b class="n" style="margin-left:6px">20</b></div></div>
+          <div class="row"><span>EANX</span><div class="blocks"><i class="e"></i><b class="n" style="margin-left:6px">1</b></div></div>
+        </div>
+      </div>
+      <div class="card gap">
+        <span class="k">FALENCIA 2 · TIMING</span>
+        <h4>No puede responder a la demanda</h4>
+        <p>La incapacidad de producir cursos B2C a gran velocidad impide aprovechar el timing de los temas en vigencia, mientras sus competidores responden al instante.</p>
+      </div>
+      <div class="card gap">
+        <span class="k">FALENCIA 3 · CAPACIDAD</span>
+        <h4>No hay capacidad instalada suficiente</h4>
+        <p>El no poder producir cursos a alta velocidad radica en que no hay capacidad instalada para lograrlo, principalmente por presupuesto.</p>
+      </div>
+      <div class="card gap">
+        <span class="k">FALENCIA 4 · MARKETING</span>
+        <h4>Inversión en marketing digital muy limitada</h4>
+        <p>La capacidad de invertir en marketing digital es muy limitada, lo que deja al catálogo compitiendo en desventaja por atención frente a plataformas con presupuesto y volumen.</p>
+      </div>
+      <div class="card gap">
+        <span class="k">FALENCIA 5 · DEPENDENCIA</span>
+        <h4>El revenue semestral de los estudiantes sostiene el proyecto</h4>
+        <p>Lo que sostiene a EANX en gran medida es el fee que pagan los estudiantes de la universidad para tener EANX dentro de la vigencia de su semestre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="eanx-enfoque">
+    <div class="sec-h">
+      <span class="eyebrow">Enfoque</span>
+      <h2>Definir el producto y el segmento antes de empujar más fuerte</h2>
+    </div>
+    <div class="sustain">
+      <div class="prose">
+        <p>EANX está en una transformación donde genera cursos presenciales, encaminándose en la vía de la educación continuada. Eso puede funcionar, pero debe definir su segmento y su posición dentro de la oferta de la universidad. EANX tiene que definir muy claramente su producto y su segmento para enfocar sus esfuerzos de manera eficiente.</p>
+        <p>A pesar de que conozco medianamente la situación de EANX, es necesario hacer un diagnóstico que abarque la situación actual del proyecto. Posterior al diagnóstico, la consultoría se encamina a acompañar a la dirección de EANX en su proceso de redefinición del proyecto y en la ejecución de las decisiones.</p>
+      </div>
+      <div>
+        <div class="callout">
+          <span class="eyebrow" style="color:var(--ink)">Las tres preguntas que ordena la consultoría</span>
+          <h3>¿Para quién, con qué producto y en qué lugar de la oferta de la universidad?</h3>
+          <p>Segmento, producto y posición. Las tres se responden en las primeras seis semanas con datos del diagnóstico y se convierten en una decisión formal de la dirección. Todo lo que viene después (portafolio, capacidad de producción, modelo comercial y presupuesto) se diseña a partir de esa decisión, no antes.</p>
+        </div>
+        <div class="scope">
+          <div class="card"><b>S1–2</b><span>Diagnóstico de la situación actual del proyecto</span></div>
+          <div class="card"><b>S3–17</b><span>Acompañamiento en la redefinición y en la ejecución</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="eanx-roadmap">
+    <div class="sec-h">
+      <span class="eyebrow">Roadmap EANX</span>
+      <h2>Cuatro meses: dos de decisión, dos de ejecución</h2>
+      <p class="muted prose">El diagnóstico es corto porque el punto de partida ya se conoce en parte; lo que lleva tiempo es decidir bien. La primera mitad del roadmap termina con una definición formal de segmento, producto y posición, y un plan de negocio aprobado. La segunda mitad ejecuta y mide.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>semanas de diagnóstico</span></div>
+      <div class="stat"><b>4</b><span>frentes de trabajo</span></div>
+      <div class="stat"><b>S6</b><span>decisión de segmento y producto</span></div>
+      <div class="stat"><b>S13</b><span>primer lanzamiento del nuevo portafolio</span></div>
+      <div class="stat"><b>3</b><span>decisiones de la dirección</span></div>
+    </div>
+
+    <div class="phases" aria-label="Fases EANX por semana">
+      <div class="phase q1" style="grid-column:1 / span 2"><span class="n">FASE 1</span><span class="t">Diagnóstico</span><span class="w">Semanas 1–2</span></div>
+      <div class="phase q2" style="grid-column:3 / span 4"><span class="n">FASE 2</span><span class="t">Redefinición estratégica</span><span class="w">Semanas 3–6</span></div>
+      <div class="phase q3" style="grid-column:7 / span 3"><span class="n">FASE 3</span><span class="t">Diseño del modelo</span><span class="w">Semanas 7–9</span></div>
+      <div class="phase q4" style="grid-column:10 / span 6"><span class="n">FASE 4</span><span class="t">Ejecución</span><span class="w">Semanas 10–15</span></div>
+      <div class="phase q5" style="grid-column:16 / span 2"><span class="n">FASE 5</span><span class="t">Medición y cierre</span><span class="w">Semanas 16–17</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h">
+        <div>
+          <h3>Qué pasa en cada frente, semana a semana</h3>
+          <p class="sub">La vista simple muestra una línea por frente y fase. La detallada abre cada actividad.</p>
+        </div>
+        <div class="seg" role="group" aria-label="Nivel de detalle EANX">
+          <button type="button" id="x-btn-simple" aria-pressed="true">Vista simple</button>
+          <button type="button" id="x-btn-detalle" aria-pressed="false">Vista detallada</button>
+        </div>
+      </div>
+      <div class="gantt-scroll"><div class="gantt" id="x-gantt"></div></div>
+      <div class="legend">
+        <span><i class="sw c-com"></i>Estrategia y posicionamiento</span>
+        <span><i class="sw c-ope"></i>Producto y portafolio</span>
+        <span><i class="sw c-per"></i>Comercial y marketing</span>
+        <span><i class="sw c-cal"></i>Capacidad y operación</span>
+        <span><i class="sw c-gob"></i>Gobierno y auditoría</span>
+        <span><i class="sw dash"></i>Condicionado a decisión de la dirección</span>
+        <span><i class="dia"></i>Hito o entregable</span>
+      </div>
+    </div>
+
+    <div class="grid5">
+      <div class="card pc" style="border-top-color:#0f5f6b">
+        <span class="wk-lbl">SEMANAS 1–2</span>
+        <h4>Diagnóstico</h4>
+        <p>Portafolio y velocidad de producción frente a la competencia, funnel B2C, peso real del fee semestral en el revenue, antecedentes del B2B, capacidad instalada, costos y unit economics por curso.</p>
+        <p class="out"><b>Entrega:</b> informe de diagnóstico con la situación actual del proyecto y las opciones estratégicas sobre la mesa.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#1d7a86">
+        <span class="wk-lbl">SEMANAS 3–6</span>
+        <h4>Redefinición estratégica</h4>
+        <p>Sesiones de trabajo con la dirección para definir segmento, producto y posición dentro de la oferta de la universidad, incluida la evaluación de retomar el B2B. Termina con una decisión formal.</p>
+        <p class="out"><b>Entrega:</b> definición de segmento, producto y posición aprobada por la dirección.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#2b6f9e">
+        <span class="wk-lbl">SEMANAS 7–9</span>
+        <h4>Diseño del modelo</h4>
+        <p>A partir de la decisión: portafolio objetivo, modelo de producción al ritmo que ese portafolio exige, modelo comercial por segmento, plan de marketing con el presupuesto real y plan de negocio.</p>
+        <p class="out"><b>Entrega:</b> plan de negocio y presupuesto aprobados.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#b8711a">
+        <span class="wk-lbl">SEMANAS 10–15</span>
+        <h4>Ejecución</h4>
+        <p>Producción de los primeros cursos del nuevo portafolio, implementación del proceso de producción, go-to-market piloto y, si se aprobó, reactivación del B2B. Primer lanzamiento en la semana 13.</p>
+        <p class="out"><b>Entrega:</b> nuevo portafolio en el mercado y proceso de producción operando.</p>
+      </div>
+      <div class="card pc" style="border-top-color:#4b5563">
+        <span class="wk-lbl">SEMANAS 16–17</span>
+        <h4>Medición y cierre</h4>
+        <p>Resultados del lanzamiento contra el plan de negocio, ajustes al portafolio según la demanda real y transferencia del tablero de control a la dirección de EANX.</p>
+        <p class="out"><b>Entrega:</b> tablero de control, plan de negocio ajustado y hoja de ruta de los siguientes seis meses.</p>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <div class="card-h"><div><h3>Por qué este orden</h3><p class="sub">Las cuatro reglas que fijan la secuencia.</p></div></div>
+        <div class="list">
+          <div class="item"><span class="k">Regla 1</span><p><b>Dos semanas de diagnóstico, no más.</b> La situación se conoce en parte; el diagnóstico confirma con datos y pone las opciones sobre la mesa.</p></div>
+          <div class="item"><span class="k">Regla 2</span><p><b>Segmento y producto antes que cualquier diseño.</b> Diseñar portafolio o marketing sin esa definición es repetir el problema actual con más esfuerzo.</p></div>
+          <div class="item"><span class="k">Regla 3</span><p><b>La capacidad de producción se diseña al ritmo del portafolio.</b> Primero se decide qué y para quién, y de ahí sale cuántos cursos, en qué formato y con qué presupuesto.</p></div>
+          <div class="item"><span class="k">Regla 4</span><p><b>Lanzar pequeño y medir.</b> Los primeros cursos del nuevo portafolio salen en la semana 13 para que el cierre mida resultados reales y no supuestos.</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-h"><div><h3>Decisiones de la dirección</h3><p class="sub">Tres hitos que conviene fijar en el calendario desde el inicio.</p></div></div>
+        <div class="list">
+          <div class="item"><span class="k">Sem. 6</span><p><b>Segmento, producto y posición dentro de la oferta de la universidad.</b> Incluye la decisión sobre retomar o no el B2B.</p></div>
+          <div class="item"><span class="k">Sem. 9</span><p><b>Plan de negocio y presupuesto.</b> Portafolio objetivo, capacidad de producción y modelo comercial aprobados.</p></div>
+          <div class="item"><span class="k">Sem. 13</span><p><b>Primer lanzamiento.</b> Salida al mercado de los primeros cursos del nuevo portafolio.</p></div>
+        </div>
+        <p class="note"><b>Lo que 4 meses no alcanza a mostrar:</b> el efecto completo del nuevo modelo sobre el revenue, que se verá en el siguiente ciclo semestral. Por eso el cierre entrega una hoja de ruta de seis meses y se recomienda una auditoría mensual posterior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="eanx-cierre">
+    <div class="sec-h">
+      <span class="eyebrow">Al cierre</span>
+      <h2>Lo que queda definido y en marcha en EANX</h2>
+    </div>
+    <div class="close">
+      <div class="prose">
+        <p>La consultoría termina con EANX enfocado: un segmento definido, un producto claro, una posición explícita dentro de la oferta de la universidad y un modelo de producción y comercial dimensionado al presupuesto real. Y con los primeros cursos del nuevo portafolio ya en el mercado, con resultados medidos.</p>
+      </div>
+      <div class="deliv">
+        <div>Informe de diagnóstico de la situación actual</div>
+        <div>Definición de segmento, producto y posición</div>
+        <div>Plan de negocio y presupuesto</div>
+        <div>Portafolio objetivo y calendario de producción</div>
+        <div>Proceso de producción de cursos implementado</div>
+        <div>Modelo comercial y plan de marketing por segmento</div>
+        <div>Tablero de control del proyecto</div>
+        <div>Hoja de ruta de los siguientes seis meses</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="inversion">
+    <div class="sec-h">
+      <span class="eyebrow">Inversión</span>
+      <h2>Condiciones de la propuesta</h2>
+      <p class="muted prose">Una tarifa mensual fija durante los cuatro meses de la intervención, que cubre la asesoría, el acompañamiento en piso y la auditoría de la implementación.</p>
+    </div>
+    <div class="inv">
+      <div class="card inv-main">
+        <div class="amount">
+          <span class="eyebrow">Valor de la inversión mensual</span>
+          <b>$ 6.000.000<small>COP</small></b>
+          <span>Pesos colombianos. Este servicio no causa IVA.</span>
+        </div>
+        <div class="inv-terms">
+          <div><span class="lbl">Duración</span><span class="val">4 meses · 17 semanas</span></div>
+          <div><span class="lbl">Dedicación</span><span class="val">Consultoría 100% online con algunas visitas programadas para verificar procesos</span></div>
+          <div><span class="lbl">Facturación</span><span class="val">Mensual</span></div>
+          <div><span class="lbl">Vigencia de la propuesta</span><span class="val">30 días a partir de su presentación</span></div>
+        </div>
+      </div>
+      <div class="inv-side">
+        <div class="card inv-box">
+          <h4>La inversión incluye</h4>
+          <ul>
+            <li>Diagnóstico, diseño de la solución y plan de implementación.</li>
+            <li>Auditoría quincenal de cumplimiento y comité mensual con la dirección.</li>
+            <li>La caja de herramientas de entregables descrita al cierre de cada capítulo.</li>
+          </ul>
+        </div>
+        <div class="card inv-box excl">
+          <h4>No incluye</h4>
+          <ul>
+            <li>Licencias de herramientas o plataformas que la universidad decida adoptar.</li>
+            <li>Presencialidad, la consultoría es 100% remota.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="inv-foot">Las condiciones de pago, confidencialidad y propiedad de los entregables se formalizan en el contrato de prestación de servicios.</p>
+  </section>
+
+  <footer>
+    <span>Propuestas de consultoría · Contact center comercial y EANX · Universidad EAN</span>
+    <span>Ricardo Pinzón · Noviembre 2026</span>
+  </footer>
+
+</div>
+
+<script>
+var EAN_LANES = [
+    { key:'com', name:'Comercial', kpi:'Indicador: conversión contacto → inscrito e inscrito → matriculado', rows:[
+      { l:'Escucha de llamadas y diagnóstico del funnel', s:1, e:3, t:'Diagnóstico del funnel' },
+      { l:'Modelo de llamada, argumentario y cadencia por canal', s:3, e:5, t:'Modelo de llamada' },
+      { l:'Proceso de seguimiento hasta la matrícula', s:5, e:9, t:'Diseño y acuerdo con admisiones y financiera', detail:true },
+      { l:'Piloto del modelo de llamada en un equipo', s:7, e:9, t:'Piloto' },
+      { l:'Grabación de la formación por segmento', s:7, e:9, t:'Grabación formación', detail:true },
+      { l:'Despliegue del modelo y la formación a toda la operación', s:10, e:14, t:'Despliegue a toda la operación' },
+      { l:'Seguimiento hasta matrícula en operación', s:10, e:17, t:'Seguimiento hasta matrícula', detail:true, cont:true }
+    ]},
+    { key:'ope', name:'Operación', kpi:'Indicador: ventas por hora conectada y cumplimiento de meta por equipo', rows:[
+      { l:'Productividad, jornada, dimensionamiento y metas', s:1, e:3, t:'Diagnóstico de operación' },
+      { l:'Preturno, metas y ventas publicadas desde la semana 2, ejecutadas por el staff de EAN', s:2, e:17, t:'Acciones inmediatas en piso ejecutadas por el staff de EAN', cont:true },
+      { l:'Rituales documentados y parrilla de estacionalidad', s:4, e:5, t:'Diseño de rituales y parrilla' },
+      { l:'Rituales completos en el equipo piloto', s:7, e:9, t:'Rituales en piloto' },
+      { l:'Rituales en toda la operación', s:10, e:17, t:'Rituales en toda la operación', cont:true },
+      { l:'Planes de acción por cuartil', s:10, e:14, t:'Planes por cuartil', detail:true }
+    ]},
+    { key:'per', name:'Personas', kpi:'Indicador: rotación, absentismo y curva de aprendizaje', rows:[
+      { l:'Rotación, incentivos, coordinadores y perfil que convierte', s:1, e:3, t:'Diagnóstico de personas' },
+      { l:'Selección, onboarding, coaching y propuesta de incentivos', s:4, e:6, t:'Diseño del eje de personas' },
+      { l:'Propuesta de incentivos entregada a la universidad', ms:6, t:'Propuesta de incentivos', detail:true },
+      { l:'Acompañamiento en piso a coordinadores', s:7, e:14, t:'Acompañamiento a coordinadores' },
+      { l:'Nuevo perfil de selección y onboarding medido', s:10, e:14, t:'Selección y onboarding', detail:true },
+      { l:'Plan de mitigación de rotación y acciones de cultura', s:10, e:14, t:'Rotación y cultura', detail:true },
+      { l:'Ajuste de incentivos (si la universidad aprueba)', s:12, e:14, t:'Ajuste de incentivos', soft:true }
+    ]},
+    { key:'cal', name:'Calidad', kpi:'Indicador: calidad correlacionada con conversión y tiempo de retroalimentación', rows:[
+      { l:'Plantilla de calidad cruzada con conversión', s:1, e:3, t:'Diagnóstico de calidad' },
+      { l:'Plantilla de calidad sobre el modelo de llamada', s:4, e:5, t:'Diseño de la plantilla' },
+      { l:'Plantilla nueva en el equipo piloto', s:7, e:9, t:'Plantilla en piloto' },
+      { l:'Calibraciones semanales', s:10, e:17, t:'Calibraciones semanales', cont:true },
+      { l:'Ciclo calidad → formación → coaching', s:10, e:17, t:'Ciclo de mejora continua', detail:true, cont:true },
+      { l:'Evaluación de herramientas de IA para el proceso de calidad', s:12, e:14, t:'IA en calidad', detail:true }
+    ]},
+    { key:'gob', name:'Gobierno y auditoría', kpi:'Informe quincenal con semáforo y comité mensual con la dirección', rows:[
+      { l:'Acceso a información y entrevistas', s:1, e:1, t:'Entrevistas', detail:true },
+      { l:'Informe de diagnóstico', ms:3, t:'Informe de diagnóstico' },
+      { l:'Priorización y metas con la dirección', ms:4, t:'Prioridades y metas' },
+      { l:'Plan maestro y plan de implementación', ms:6, t:'Plan maestro' },
+      { l:'Decisión de escalar el piloto', ms:9, t:'Escalar piloto' },
+      { l:'Informes quincenales de cumplimiento', s:7, e:17, t:'Auditoría quincenal', cont:true },
+      { l:'Comités mensuales con la dirección', ms:[10,14,17], t:'Comité', detail:true },
+      { l:'Medición contra línea base y transferencia', s:15, e:17, t:'Medición y transferencia' },
+      { l:'Cierre y entrega de la caja de herramientas', ms:17, t:'Cierre', detail:true }
+    ]}
+];
+
+var EANX_LANES = [
+    { key:'com', name:'Estrategia y posicionamiento', kpi:'Segmento, producto y posición dentro de la oferta de la universidad', rows:[
+      { l:'Diagnóstico de la situación actual del proyecto', s:1, e:2, t:'Diagnóstico' },
+      { l:'Definición de segmento y producto con la dirección', s:3, e:5, t:'Segmento y producto' },
+      { l:'Posición de EANX dentro de la oferta de la universidad', s:4, e:6, t:'Posición en la oferta', detail:true },
+      { l:'Decisión formal de la dirección sobre segmento y producto', ms:6, t:'Decisión formal' },
+      { l:'Plan de negocio: revenue objetivo, costos y presupuesto', s:7, e:9, t:'Plan de negocio' },
+      { l:'Seguimiento de la estrategia frente a resultados', s:10, e:17, t:'Seguimiento de la estrategia', detail:true, cont:true }
+    ]},
+    { key:'ope', name:'Producto y portafolio', kpi:'Velocidad de producción y pertinencia del portafolio frente a la demanda', rows:[
+      { l:'Inventario del portafolio y benchmark de velocidad frente a la competencia', s:1, e:2, t:'Portafolio y benchmark' },
+      { l:'Diseño del portafolio objetivo: educación continuada presencial y digital', s:7, e:9, t:'Portafolio objetivo' },
+      { l:'Modelo de producción rápida: formatos, roles y herramientas de IA', s:7, e:9, t:'Modelo de producción', detail:true },
+      { l:'Producción de los primeros cursos del nuevo portafolio', s:10, e:13, t:'Primeros cursos' },
+      { l:'Primer lanzamiento del nuevo portafolio', ms:13, t:'Primer lanzamiento' },
+      { l:'Ajuste del portafolio según demanda real', s:14, e:17, t:'Ajuste según demanda', detail:true, cont:true }
+    ]},
+    { key:'per', name:'Comercial y marketing', kpi:'Conversión por segmento y costo de adquisición frente al presupuesto real', rows:[
+      { l:'Funnel B2C, peso del fee semestral y antecedentes del B2B', s:1, e:2, t:'Diagnóstico comercial' },
+      { l:'Evaluación de retomar el segmento B2B', s:3, e:5, t:'Evaluar retomar B2B', soft:true },
+      { l:'Modelo comercial por segmento', s:7, e:9, t:'Modelo comercial' },
+      { l:'Plan de marketing con presupuesto limitado: base propia de estudiantes, egresados y empresas', s:7, e:9, t:'Plan de marketing', detail:true },
+      { l:'Go-to-market piloto del nuevo portafolio', s:10, e:15, t:'Go-to-market piloto' },
+      { l:'Reactivación del B2B (si la dirección lo aprueba)', s:12, e:17, t:'Reactivación B2B', soft:true, cont:true }
+    ]},
+    { key:'cal', name:'Capacidad y operación', kpi:'Capacidad instalada, costo por curso y unit economics', rows:[
+      { l:'Capacidad instalada, costos y unit economics por curso', s:1, e:2, t:'Capacidad y costos' },
+      { l:'Rediseño de la capacidad de producción y del presupuesto', s:7, e:9, t:'Capacidad y presupuesto' },
+      { l:'Implementación del proceso de producción', s:10, e:15, t:'Proceso de producción en marcha' },
+      { l:'Tablero de control del proyecto', s:10, e:17, t:'Tablero de control', detail:true, cont:true }
+    ]},
+    { key:'gob', name:'Gobierno y auditoría', kpi:'Sesiones con la dirección, auditoría quincenal y comité mensual', rows:[
+      { l:'Acceso a información y entrevistas', s:1, e:1, t:'Entrevistas', detail:true },
+      { l:'Informe de diagnóstico', ms:2, t:'Informe de diagnóstico' },
+      { l:'Sesiones de redefinición con la dirección', s:3, e:6, t:'Sesiones de redefinición' },
+      { l:'Plan de negocio y presupuesto aprobados', ms:9, t:'Plan aprobado' },
+      { l:'Informes quincenales de cumplimiento', s:10, e:17, t:'Auditoría quincenal', cont:true },
+      { l:'Comités mensuales con la dirección', ms:[10,14,17], t:'Comité', detail:true },
+      { l:'Medición contra el plan de negocio y transferencia', s:16, e:17, t:'Medición y cierre' }
+    ]}
+];
+
+function buildGantt(cfg){
+  var WEEKS = 17, phaseOf = cfg.phaseOf, lanes = cfg.lanes, g = cfg.el;
+  var mode = 'simple';
+  try { if (localStorage.getItem(cfg.key) === 'detalle') mode = 'detalle'; } catch(e){}
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function render(){
+    var h = [], row = 1;
+    h.push('<div class="corner" style="grid-row:'+row+'"></div>');
+    var bands = cfg.bands;
+    bands.forEach(function(b){ h.push('<div class="pband" style="grid-row:'+row+';grid-column:'+(b[0]+1)+' / '+(b[1]+2)+';background:'+b[3]+'">'+b[2]+'</div>'); });
+    row++;
+    h.push('<div class="corner" style="grid-row:'+row+'"></div>');
+    for (var w=1; w<=WEEKS; w++){ h.push('<div class="wk" style="grid-row:'+row+';grid-column:'+(w+1)+'"><small>SEM</small>'+w+'</div>'); }
+    row++;
+    lanes.forEach(function(lane){
+      var rows = lane.rows.filter(function(r){ return mode==='detalle' || !r.detail; });
+      h.push('<div class="lane-h" style="grid-row:'+row+' / span '+rows.length+'"><span class="nm"><i class="c-'+lane.key+'"></i>'+esc(lane.name)+'</span><span class="kpi">'+esc(lane.kpi)+'</span></div>');
+      rows.forEach(function(r){
+        for (var w=1; w<=WEEKS; w++){ h.push('<div class="cell ph'+phaseOf(w)+'" style="grid-row:'+row+';grid-column:'+(w+1)+'"></div>'); }
+        if (r.ms !== undefined){
+          var arr = Array.isArray(r.ms) ? r.ms : [r.ms];
+          arr.forEach(function(m, i){
+            var showLabel = (i===0 && arr.length===1);
+            h.push('<div class="ms-wrap t-'+lane.key+'" style="grid-row:'+row+';grid-column:'+(m+1)+(showLabel?' / span 3':'')+'" title="'+esc(r.l)+' · semana '+m+'"><i class="ms c-'+lane.key+'"></i>'+(showLabel?'<span>'+esc(r.t)+'</span>':'')+'</div>');
+          });
+        } else {
+          var cls = 'bar c-'+lane.key+(r.soft?' soft t-'+lane.key:'')+(r.cont?' cont':'');
+          var len = r.e - r.s + 1, tip = esc(r.l)+' · semanas '+r.s+'–'+r.e;
+          if (len < 3 && r.e < WEEKS){
+            h.push('<div class="'+cls+'" style="grid-row:'+row+';grid-column:'+(r.s+1)+' / '+(r.e+2)+'" title="'+tip+'"></div>');
+            h.push('<div class="blab t-'+lane.key+'" style="grid-row:'+row+';grid-column:'+(r.e+2)+' / span 4" title="'+tip+'">'+esc(r.t)+'</div>');
+          } else {
+            h.push('<div class="'+cls+'" style="grid-row:'+row+';grid-column:'+(r.s+1)+' / '+(r.e+2)+'" title="'+tip+'">'+esc(r.t)+'</div>');
+          }
+        }
+        row++;
+      });
+    });
+    g.innerHTML = h.join('');
+  }
+  var bS = cfg.btnSimple, bD = cfg.btnDetalle;
+  function setMode(m){
+    mode = m;
+    bS.setAttribute('aria-pressed', m==='simple' ? 'true':'false');
+    bD.setAttribute('aria-pressed', m==='detalle' ? 'true':'false');
+    try { localStorage.setItem(cfg.key, m); } catch(e){}
+    render();
+  }
+  bS.addEventListener('click', function(){ setMode('simple'); });
+  bD.addEventListener('click', function(){ setMode('detalle'); });
+  setMode(mode);
+}
+
+buildGantt({
+  el: document.getElementById('gantt'),
+  btnSimple: document.getElementById('btn-simple'),
+  btnDetalle: document.getElementById('btn-detalle'),
+  key: 'ean-propuesta-view',
+  lanes: EAN_LANES,
+  phaseOf: function(w){ return w<=3?1 : w<=6?2 : w<=9?3 : w<=14?4 : 5; },
+  bands: [[1,3,'Diagnóstico','#0f5f6b'],[4,6,'Diseño y planificación','#1d7a86'],[7,9,'Piloto','#9a5e14'],[10,14,'Escalamiento','#b8711a'],[15,17,'Medición y cierre','#4b5563']]
+});
+
+buildGantt({
+  el: document.getElementById('x-gantt'),
+  btnSimple: document.getElementById('x-btn-simple'),
+  btnDetalle: document.getElementById('x-btn-detalle'),
+  key: 'eanx-propuesta-view',
+  lanes: EANX_LANES,
+  phaseOf: function(w){ return w<=2?1 : w<=6?2 : w<=9?3 : w<=15?4 : 5; },
+  bands: [[1,2,'Diagnóstico','#0f5f6b'],[3,6,'Redefinición estratégica','#1d7a86'],[7,9,'Diseño del modelo','#2b6f9e'],[10,15,'Ejecución','#b8711a'],[16,17,'Medición y cierre','#4b5563']]
+});
+
+(function(){
+  // Acordeones por eje: botón "Abrir todo / Cerrar todo" y etiqueta que sigue el estado real.
+  document.querySelectorAll('.axis').forEach(function(axis){
+    var btn = axis.querySelector('.tog');
+    var items = axis.querySelectorAll('details.it');
+    if (!btn || !items.length) return;
+    function sync(){
+      var allOpen = Array.prototype.every.call(items, function(d){ return d.open; });
+      btn.textContent = allOpen ? 'Cerrar todo' : 'Abrir todo';
+      btn.setAttribute('data-open', allOpen ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('data-open') !== 'true';
+      items.forEach(function(d){ d.open = open; });
+      sync();
+    });
+    items.forEach(function(d){ d.addEventListener('toggle', sync); });
+    sync();
+  });
+})();
+</script>
+</body>
+</html>
